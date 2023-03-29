@@ -10,6 +10,6 @@ namespace eTickets.Models
         public string  Bio { get; set; }
 
         //relation
-        public List<Actor_Movie> Actors_Movies { get; set; }   
+        public List<Movie> film { get; set; }   
     }
 }
