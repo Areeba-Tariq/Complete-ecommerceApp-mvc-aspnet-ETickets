@@ -1,7 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext <eTickets.Data.AppDbContext>();
+builder.Services.AddDbContext <eTickets.Data.AppDbContext>(options=>options.UseSqlServer("Data Source=DESKTOP-JBAUNF9\\SQLEXPRESS;Initial Catalog=projectdb;Integrated Security=True;Pooling=False"));
     builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
